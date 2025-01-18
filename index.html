@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Social Compute Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div class="text-center px-4">
+      <div class="absolute top-5 left-5">
+        <img src="/assets/NUMA-logo.svg" />
+      </div>
+      <div class="absolute top-5 right-5 flex gap-4">
+        <a href="https://twitter.com/NUMAsocial" target="_blank" class="w-8 h-8 border border-gray-400 rounded-md flex items-center justify-center">
+          <img src="/assets/X-logo.svg" class="w-5 h-5" />
+        </a>
+        <a href="https://t.me/NUMASocialBot" target="_blank" class="w-8 h-8 border border-gray-400 rounded-md flex items-center justify-center">
+          <img src="/assets/Telegram-logo.svg" class="w-5 h-5" />
+        </a>
+      </div>
+      <div class="absolute top-28 transform -translate-x-1/2 z-20 background-black w-full backdrop-blur-sm">
+        <img class="inline-block mb-8" src="/assets/comingsoon.svg" />
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          The Social <br />
+          Compute Network
+        </h1>
+        <p class="text-gray-400 text-base sm:text-lg background-black px-10" style="font-family: 'PolySans Slim', sans-serif">Transform Your Idle Devices to Power the AI Agent Revolution</p>
+      </div>
+    </div>
+    <div class="bottom-image-container"></div>
+  </body>
+</html>
+<style>
+  @font-face {
+    font-family: "PolySans Median";
+    src: url("/fonts/PolySans-Median.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "PolySans Slim";
+    src: url("/fonts/PolySans-Slim.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "PolySans Median", sans-serif;
+  }
+  .bottom-image-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/noise.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Adjust this value to change the strength */
+    z-index: 1;
+  }
+  .bottom-image-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70vh; /* Adjust as needed */
+    background-image: url("/assets/door.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; /* Optional: blend the layers */
+  }
+
+  @media (max-width: 640px) {
+    .bottom-image-container {
+      height: 60vh;
+      bottom: -5vh;
+    }
+  }
+</style>
