@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/deck",
+      "destination": "/deck.html"
+    }
+  ]
+}
