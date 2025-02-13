@@ -321,6 +321,7 @@
             body: JSON.stringify({
               twitter: twitterInput.value.trim(),
               ethAddress: ethInput.value.trim(),
+              version: 1,
             }),
           })
 
@@ -340,7 +341,7 @@
       function validateForm() {
         const ethRegex = /^0x[a-fA-F0-9]{40}$/
         ethValid = ethRegex.test(ethInput.value.trim())
-        twitterValid = twitterInput.value.trim().startsWith("@") && twitterInput.value.length > 1
+        twitterValid = twitterInput.value.length > 1
 
         ethCheck.classList.toggle("hidden", !ethValid)
         twitterCheck.classList.toggle("hidden", !twitterValid)
