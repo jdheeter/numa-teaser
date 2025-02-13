@@ -3,6 +3,10 @@
     {
       "source": "/deck",
       "destination": "/deck.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/$1.html"
     }
   ]
 }
