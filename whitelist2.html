@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NUMA PASS - Whitelist Application</title>
+    <title>NUMA ACA - Whitelist Application</title>
     <style>
       /* Base positioning for cards and display */
       .card-1 {
@@ -136,9 +136,9 @@
     <!-- Background -->
     <div class="fixed inset-0 -z-10 min-h-screen overflow-hidden scene hidden lg:block">
       <img src="/assets/whitelist/Hero-BG.webp" alt="" class="absolute h-screen object-cover object-right-bottom right-0" />
-      <img src="/assets/whitelist/NUMAPASS-2.webp" alt="" class="card-1 absolute floating floating-delay-2" />
-      <img src="/assets/whitelist/NUMAPASS-1.webp" alt="" class="card-2 absolute floating-3d floating-delay-1" />
-      <img src="/assets/whitelist/UnitsDisplay.webp" alt="" class="units-display absolute" />
+      <!-- <img src="/assets/whitelist/NUMAPASS-2.webp" alt="" class="card-1 absolute floating floating-delay-2" /> -->
+      <img src="/assets/whitelist/ACA1.webp" alt="" class="card-2 absolute floating" />
+      <img src="/assets/whitelist/Units2.webp" alt="" class="units-display absolute" />
     </div>
 
     <!-- Top Bar -->
@@ -149,15 +149,17 @@
       <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center px-6 md:px-16 py-8 z-10 lg:ml-52">
         <img src="/assets/NUMA-logo.svg" alt="NUMA" class="w-28 mb-10" />
         <div>
-          <img src="/assets/whitelist/top-badge.webp" alt="M2" class="h-9" />
+          <img src="/assets/whitelist/badge2.webp" alt="M2" class="h-9" />
         </div>
 
         <!-- Header -->
         <div class="mb-8">
           <div class="flex items-center gap-4 my-5 md:mt-4">
-            <img src="/assets/whitelist/passes.webp" alt="NUMA PASS" class="h-24 w-auto lg:hidden" />
+            <img src="/assets/whitelist/passes.webp" alt="ACA" class="h-24 w-auto lg:hidden" />
             <div class="flex flex-col lg:flex-row items-center gap-0">
-              <p class="text-xl text-left mt-4 mb-2">Whitelist Application // <span class="text-[#C4FF67] text-xl text-left mt-4 mb-2">NUMA PASS</span></p>
+              <p class="text-xl text-left mt-4 mb-2">
+                Whitelist Application // <span class="text-[#C4FF67] text-xl text-left mt-4 mb-2">ACA<span class="text-sm"> Adaptive Compute Unit</span></span>
+              </p>
             </div>
           </div>
 
@@ -315,13 +317,11 @@
         try {
           const response = await fetch("https://server-production-c3f4.up.railway.app/api/users/submitWhitelistInfo", {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               twitter: twitterInput.value.trim(),
               ethAddress: ethInput.value.trim(),
-              version: 1,
+              version: 2,
             }),
           })
 
@@ -362,7 +362,7 @@
       })
 
       repostButton.addEventListener("click", function () {
-        window.open("https://x.com/intent/tweet?url=https://x.com/numasocial/status/1890114226372665774", "_blank")
+        window.open("https://twitter.com/intent/tweet?text=I want to be chosen for @numasocial because...", "_blank")
         repostClicked = true
         repostCheck.classList.remove("hidden")
         updateSubmitButton()
